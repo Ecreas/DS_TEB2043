@@ -6,6 +6,11 @@ levels_age <- levels(age)
 
 print(age)
 print(age_factor)
+print(levels_age)
+
+breaks <- seq(50, 60, by=2) 
+print(breaks)
+
 
 
 
