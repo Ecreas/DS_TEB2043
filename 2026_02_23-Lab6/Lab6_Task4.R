@@ -30,3 +30,9 @@ summary(new_student_scores)
 cat("number of rows: ", nrow(new_student_scores))
 cat("number of columns: ", ncol(new_student_scores))
 
+#the score min value is 8.0 and the max is 19.0, with the mean is about 12.56
+#4 students has qualified and 4 didnt
+#it seems scores 12.0 and below didn't qualify
+#the dataset is small
+
+
