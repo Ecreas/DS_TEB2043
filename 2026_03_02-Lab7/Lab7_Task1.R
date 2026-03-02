@@ -12,7 +12,11 @@ which(is.na(titanic))
 print(sapply(titanic, function(x) sum(is.na(x)))) 
 
 dim(titanic)
-titanic_cleaned = mutate(titanic, Age = ifelse(is.na(Age), mean(Age, na.rm = TRUE), Age))
+titanic_cleaned <- titanic %>%
+  mutate(
+  Age = ifelse(is.na(Age), mean(Age, na.rm = TRUE), Age),
+  Age = as.integer(round(Age))
+  )
 View (titanic_cleaned)
 
 colnames(titanic_cleaned)
@@ -34,5 +38,6 @@ print(totalSurvived)
 genderCount <- titanic_cleaned %>%
   group_by(Sex)
   summarise(Total = n())
+
 
 
